@@ -1,4 +1,7 @@
+import dayjs from 'dayjs';
 import './style.scss';
+
+dayjs.locale('fr');
 
 export default function Header() {
   return (

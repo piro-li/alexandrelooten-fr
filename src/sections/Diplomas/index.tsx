@@ -1,7 +1,10 @@
+import dayjs from 'dayjs';
 import DiplomaWindow from '../../components/Window/DiplomaWindow';
 import diplomas from '../../data/diplomas';
 
 import './style.scss';
+
+dayjs.locale('fr');
 
 export default function Diplomas() {
   return (

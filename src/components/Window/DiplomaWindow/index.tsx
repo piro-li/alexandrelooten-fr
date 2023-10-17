@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import Window from '..';
 import { Diploma } from '../../../data/diplomas';
 
@@ -6,6 +7,8 @@ import './style.scss';
 interface DiplomaWindowProps {
   diploma: Diploma;
 }
+
+dayjs.locale('fr');
 
 export default function DiplomaWindow({ diploma }: DiplomaWindowProps) {
   return (

@@ -1,6 +1,9 @@
+import dayjs from 'dayjs';
 import Window from '../../components/Window';
 import experiences from '../../data/experiences';
 import './style.scss';
+
+dayjs.locale('fr');
 
 export default function Experiences() {
   return (

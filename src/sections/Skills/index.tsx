@@ -1,6 +1,9 @@
+import dayjs from 'dayjs';
 import Window from '../../components/Window';
 import skills from '../../data/skills';
 import './style.scss';
+
+dayjs.locale('fr');
 
 export default function Skills() {
   return (

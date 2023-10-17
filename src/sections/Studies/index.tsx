@@ -1,6 +1,9 @@
+import dayjs from 'dayjs';
 import Window from '../../components/Window';
 import studies from '../../data/studies';
 import './style.scss';
+
+dayjs.locale('fr');
 
 export default function Studies() {
   return (
