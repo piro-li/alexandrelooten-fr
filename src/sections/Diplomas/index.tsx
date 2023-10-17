@@ -7,7 +7,7 @@ export default function Diplomas() {
   return (
     <>
       {diplomas.map((diploma) => (
-        <DiplomaWindow diploma={diploma} />
+        <DiplomaWindow diploma={diploma} key={diploma.title} />
       ))}
       <img className="diplomas__icon" src="/images/trophy.svg" alt="" />
     </>

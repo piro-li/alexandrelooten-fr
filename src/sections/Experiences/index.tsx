@@ -8,7 +8,7 @@ export default function Experiences() {
       <img className="experiences__icon" src="/images/arrow.svg" alt="" />
       <Window id="experiences" head={{ title: 'Expériences', level: 2, color: 'tertiary' }}>
         {experiences.map((experience) => (
-          <div className="experience">
+          <div className="experience" key={experience.title}>
             <div className="experience__header">
               <span className="experience__header__contract">
                 {experience.contract}
@@ -35,7 +35,7 @@ export default function Experiences() {
             </div>
             <ul className="experience__content">
               {experience.description.map((paragraph) => (
-                <li className="experience__content__paragraph">
+                <li className="experience__content__paragraph" key={paragraph}>
                   {paragraph}
                 </li>
               ))}

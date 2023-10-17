@@ -8,7 +8,7 @@ export default function Studies() {
       <img className="studies__icon" src="/images/phone.svg" alt="" />
       <Window id="studies" head={{ title: 'Formation', level: 2, color: 'tertiary' }}>
         {studies.map((study) => (
-          <div className="study">
+          <div className="study" key={study.title}>
             <div className="study__header">
               <span className="study__header__time">
                 {study.startDate.format('YYYY')}
@@ -29,7 +29,7 @@ export default function Studies() {
             </div>
             <ul className="study__content">
               {study.description.map((paragraph) => (
-                <li className="study__content__paragraph">
+                <li className="study__content__paragraph" key={paragraph}>
                   {paragraph}
                 </li>
               ))}

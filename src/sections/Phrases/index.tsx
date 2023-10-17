@@ -21,7 +21,7 @@ export default function Phrases() {
         className="phrases"
       >
         {taglineStrings.map((taglineString) => (
-          <SwiperSlide className="phrases__slide">
+          <SwiperSlide className="phrases__slide" key={taglineString}>
             <span className="phrases__slide__text">
               {taglineString}
             </span>
