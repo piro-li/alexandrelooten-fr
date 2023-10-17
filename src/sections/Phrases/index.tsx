@@ -14,7 +14,7 @@ export default function Phrases() {
           clickable: false,
         }}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         modules={[Pagination, Autoplay, Navigation]}
