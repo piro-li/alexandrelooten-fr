@@ -5,6 +5,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
+    "airbnb"
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
@@ -14,5 +15,11 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
+    "react/jsx-filename-extension": [1, { extensions: [".tsx", ".jsx", ".ts", ".js"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-undef": "off",
   },
 };

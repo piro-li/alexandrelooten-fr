@@ -1,0 +1,64 @@
+@use "../../styles/colors";
+@use "../../styles/breakpoints";
+
+@import "../../styles/fonts";
+
+.studies__icon {
+  display: none;
+
+  @media screen and (min-width: breakpoints.$md) {
+    display: block;
+    position: absolute;
+    top: 180rem;
+    left: 72%;
+    z-index: 4;
+    rotate: 12deg;
+    width: 15rem;
+  }
+}
+
+.study {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &__header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__sub {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    &__time {
+      font-size: 1.5rem;
+      font-weight: 400;
+      background-color: colors.$primary;
+      font-weight: bold;
+      color: colors.$white;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+    }
+  }
+
+  &__data {
+    align-items: baseline;
+    display: flex;
+    gap: 0.5rem;
+    color: colors.$primary;
+
+    &__school {
+      color: colors.$black
+    }
+  }
+}

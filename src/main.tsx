@@ -1,10 +1,30 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.scss";
-import { Hero } from "./sections/Hero";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import dayjs from 'dayjs';
+import 'dayjs/locale/fr';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+import './index.scss';
+import Window from './components/Window';
+import Header from './sections/Header';
+import Background from './components/Background';
+import Experiences from './sections/Experiences';
+import Phrases from './sections/Phrases';
+import Skills from './sections/Skills';
+import Diplomas from './sections/Diplomas';
+import Studies from './sections/Studies';
+
+dayjs.locale('fr');
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Hero />
-  </React.StrictMode>
+    <Window id="main" head={{ title: 'Site Internet', level: 1, color: 'secondary' }}>
+      <Background />
+      <Header />
+      <Phrases />
+      <Skills />
+      <Experiences />
+      <Diplomas />
+      <Studies />
+    </Window>
+  </React.StrictMode>,
 );

@@ -1,0 +1,83 @@
+@use "../../styles/colors";
+@use "../../styles/breakpoints";
+
+@import "../../styles/fonts";
+
+.window {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid colors.$black;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 10px rgba(colors.$black, 0.1);
+
+  h1, h2 {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      height: 1.8rem;
+      width: 1.8rem;
+      border-radius: 50%;
+      border: 2px solid colors.$black;
+      background-color: colors.$primary;
+      margin-right: 2rem;
+    }
+  }
+
+  &__head {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid colors.$black;
+
+    &.primary {
+      background-color: colors.$primary;
+    }
+
+    &.secondary {
+      background-color: colors.$secondary;
+    }
+
+    &.tertiary {
+      background-color: colors.$tertiary;
+    }
+
+    &__controls {
+      display: flex;
+      gap: 2rem;
+
+      .reduce_button, .close_button::before, .close_button::after {
+        content: "";
+        display: block;
+        width: 1.8rem;
+        height: 2px;
+        background-color: colors.$black;
+        transform-origin: center;
+      }
+
+      .close_button::before {
+        position: absolute;
+        transform: rotate(45deg);
+      }
+
+      .close_button::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__content {
+    height: 100%;
+    position: relative;
+    padding: 2rem 3rem;
+
+    background-color: colors.$white;
+    overflow: hidden;
+
+    @media screen and (min-width: breakpoints.$md) {
+      padding: 2rem 4rem;
+    }
+  }
+}

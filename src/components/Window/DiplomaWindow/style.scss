@@ -1,0 +1,42 @@
+@use "../../../styles/colors";
+@use "../../../styles/breakpoints";
+
+@import "../../../styles/fonts";
+
+#window-diploma {
+  display: none;
+
+  @media screen and (min-width: breakpoints.$md) {
+    display: flex;
+  }
+
+  & .first {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+    & .diploma {
+      &__year {
+        font-weight: bold;
+        background-color: colors.$secondary;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+      }
+
+      &__grade {
+        background-color: colors.$tertiary;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  & .diploma {
+    &__title {
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 0.5rem 0;
+    }
+  }
+}

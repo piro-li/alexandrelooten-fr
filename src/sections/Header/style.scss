@@ -1,0 +1,82 @@
+@use "../../styles/colors";
+@use "../../styles/breakpoints";
+
+@import "../../styles/fonts";
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  background-color: colors.$white;
+  border: 2px solid colors.$black;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
+
+  @media screen and (min-width: breakpoints.$md) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .alex {
+    width: 70%;
+
+    @media screen and (min-width: breakpoints.$md) {
+      width: 30%;
+    }
+  }
+
+  &__side {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+
+    @media screen and (min-width: breakpoints.$md) {
+      align-items: end;
+    }
+
+    &__title {
+      font-family: "FS Gravity", sans-serif;
+      font-size: 3em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__subtitle {
+      margin-top: 0;
+      text-align: center;
+
+      @media screen and (min-width: breakpoints.$md) {
+        text-align: end;
+      }
+    }
+
+    &__socials {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      text-align: left;
+
+      a {
+        border-radius: 50%;
+        border: 2px solid colors.$black;
+        display: flex;
+        width: 4.5rem;
+        height: 4.5rem;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-color: colors.$black;
+          color: colors.$white;
+        }
+      }
+    }
+  }
+}

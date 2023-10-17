@@ -1,31 +1,51 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alexandre Looten</title>
-    <script
-      src="https://kit.fontawesome.com/6947a7c7f9.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <form
-      aria-hidden="true"
-      name="contact"
-      netlify
-      netlify-honeypot="bot-field"
-      style="display: none"
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" name="bot-field" />
-      <input required type="text" placeholder=" " name="firstname" />
-      <input required type="text" placeholder=" " name="lastname" />
-      <input required type="email" placeholder=" " name="email" />
-      <textarea required placeholder=" " name="message"></textarea>
-    </form>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexandre Looten</title>
+  <meta name="theme-color" content="#f0f0f0" />
+  <script src="https://kit.fontawesome.com/6947a7c7f9.js" crossorigin="anonymous"></script>
+  <script>
+    const setRightHeight = () => {
+      var container = document.getElementById('window-main');
+      var containerContent = container.querySelector('.window__content');
+      var children = containerContent.querySelectorAll('.window');
+      var maxHeight = 0;
+
+      children.forEach(function (child) {
+        var childRect = child.getBoundingClientRect();
+        var childHeight = childRect.top + childRect.height;
+        if (childHeight > maxHeight) {
+          maxHeight = childHeight;
+        }
+      });
+
+      maxHeight += 30;
+      container.style.height = maxHeight + 'px';
+    };
+
+    if (document.documentElement.clientWidth >= 728) {
+      window.addEventListener('load', setRightHeight, false);
+      window.addEventListener('resize', setRightHeight, false);
+    };
+
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <form aria-hidden="true" name="contact" netlify netlify-honeypot="bot-field" style="display: none">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="bot-field" />
+    <input required type="text" placeholder=" " name="firstname" />
+    <input required type="text" placeholder=" " name="lastname" />
+    <input required type="email" placeholder=" " name="email" />
+    <textarea required placeholder=" " name="message"></textarea>
+  </form>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

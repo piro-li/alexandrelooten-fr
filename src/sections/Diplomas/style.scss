@@ -1,0 +1,17 @@
+@use "../../styles/colors";
+@use "../../styles/breakpoints";
+
+@import "../../styles/fonts";
+
+.diplomas__icon {
+  display: none;
+
+  @media screen and (min-width: breakpoints.$md) {
+    display: block;
+    position: absolute;
+    top: 108rem;
+    right: 2%;
+    z-index: 4;
+    width: 10rem;
+  }
+}
