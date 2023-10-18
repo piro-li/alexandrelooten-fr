@@ -81,46 +81,57 @@ body {
     }
 
     @media screen and (min-width: breakpoints.$md) {
-      position: relative;
-      display: block;
+      // position: relative;
+      // display: block;
       width: 100%;
       z-index: 1;
 
       & > .window__content {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        & .header {
+          height: fit-content;
+          grid-area: 1 / 1 / 2 / 3;
+        };
       }
     }
-
   }
 
   &-phrases {
     height: 16rem;
     @media screen and (min-width: breakpoints.$md) {
-      position: absolute;
-      width: 45%;
-      top: 24rem;
-      left: 6rem;
+      grid-area: 2 / 1 / 3 / 2;
+      top: -6rem;
+      left: 2rem;
       z-index: 3;
     }
   }
 
   &-experiences {
     @media screen and (min-width: breakpoints.$md) {
-      position: absolute;
-      width: 53%;
-      top: 45rem;
-      left: 4rem;
+      grid-area: 3 / 1 / 6 / 2;
+      // position: absolute;
+      width: 115%;
+      // top: 45rem;
+      // left: 4rem;
       z-index: 3;
+      height: fit-content;
     }
   }
 
   &-skills {
     @media screen and (min-width: breakpoints.$md) {
-      position: absolute;
-      width: 30%;
-      left: 65%;
-      top: 26rem;
+      grid-area: 2 / 2 / 4 / 3;
+      // position: absolute;
+      width: 70%;
+      left: 28%;
+      top: -4.5rem;
       z-index: 3;
+      height: fit-content;
     }
   }
 
@@ -131,21 +142,24 @@ body {
         margin-left: 3rem;
       }
 
-      width: 35%;
-      left: 63%;
-      top: 60rem;
+      grid-area: 4 / 2 / 6 / 3;
+      width: 70%;
+      left: 28%;
+      margin: 2rem 0;
+      top: -2rem;
       z-index: 2;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
     }
   }
 
   &-studies {
     @media screen and (min-width: breakpoints.$md) {
-      position: absolute;
+      grid-area: 6 / 1 / 7 / 3;
+      // position: absolute;
       width: 80%;
       left: 10%;
-      right: 0;
-      top: 157rem;
+      // right: 0;
+      // top: 157rem;
       z-index: 2;
       margin-bottom: 1rem;
     }

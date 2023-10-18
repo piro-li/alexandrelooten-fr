@@ -25,6 +25,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Experiences />
       <Diplomas />
       <Studies />
+      <div style={{ textAlign: 'center', gridArea: '7 / 1 / 8 / 3' }}>
+        Alexandre Looten
+        {' '}
+        &copy;
+        {' '}
+        {dayjs().year().toString()}
+      </div>
     </Window>
   </React.StrictMode>,
 );

@@ -8,11 +8,11 @@ dayjs.locale('fr');
 
 export default function Diplomas() {
   return (
-    <>
+    <div className="diplomas">
       {diplomas.map((diploma) => (
         <DiplomaWindow diploma={diploma} key={diploma.title} />
       ))}
       <img className="diplomas__icon" src="/images/trophy.svg" alt="" />
-    </>
+    </div>
   );
 }
