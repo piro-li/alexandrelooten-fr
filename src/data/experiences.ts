@@ -37,8 +37,8 @@ const experiences: Experience[] = [
     contract: 'Saisonnier',
     title: 'Assistant Clientèle',
     location: "Caisse d'Épargne Languedoc Roussillon / Montpellier",
-    startDate: dayjs('20210801'),
-    endDate: dayjs('20200801'),
+    startDate: dayjs('20200801'),
+    endDate: dayjs('20210801'),
     description: [
       'Accueil et conseil des clients.',
       'Gestion des appels.',
@@ -54,7 +54,6 @@ const experiences: Experience[] = [
     description: [
       "Création d'un parcours virtuel à l'aide de QR Codes.",
       "Recherche et mise en place d'idées pour promouvoir le site.",
-      'Encaissement des chèques.',
     ],
   },
   {
@@ -72,7 +71,7 @@ const experiences: Experience[] = [
     title: 'Secrétaire',
     location: 'Centre Nautique, Alès (30)',
     startDate: dayjs('20190101'),
-    endDate: dayjs('20100301'),
+    endDate: dayjs('20190301'),
     description: [
       "Gestion de l'accueil des client",
       "Création d'affiches et de documentation",
