@@ -19,9 +19,9 @@ export default function Header() {
           <a href="https://linkedin.com/in/alexandre-looten-communication" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-linkedin-in" />
           </a>
-          <a href="/files/CV-Alexandre_LOOTEN-Communication.pdf" rel="noopener noreferrer" download="CV-Alexandre_LOOTEN-Communication.pdf">
+{/*           <a href="/files/CV-Alexandre_LOOTEN-Communication.pdf" rel="noopener noreferrer" download="CV-Alexandre_LOOTEN-Communication.pdf">
             <i className="fa-solid fa-file-pdf" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
