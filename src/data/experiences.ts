@@ -67,6 +67,19 @@ const experiences: Experience[] = [
       "Participation au développement de la communication et création d'un plan de communication pour l'évènement \"Escale à Port-Vendres\" en partenariat avec le Lycée.",
     ],
   },
+  {
+    contract: 'Stage',
+    title: 'Secrétaire',
+    location: 'Centre Nautique, Alès (30)',
+    startDate: dayjs('20190101'),
+    endDate: dayjs('20100301'),
+    description: [
+      "Gestion de l'accueil des client",
+      "Création d'affiches et de documentation",
+      'Gestion des factures et des devis',
+      'Envoi des courriers, emails et fax',
+    ],
+  },
 ];
 
 export default experiences;
